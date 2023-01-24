@@ -1,5 +1,5 @@
 # Epic-Mickey-Modding-Tools
-To go alongside with Epic Mickey Launcher
+To go alongside the Epic Mickey Launcher
 
 A set of tools to mod various Epic Mickey files
 
