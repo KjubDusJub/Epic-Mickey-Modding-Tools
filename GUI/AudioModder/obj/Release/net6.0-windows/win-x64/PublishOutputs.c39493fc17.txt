@@ -1,2 +1,0 @@
-C:\Users\janaa\source\repos\AudioModder\AudioModder\bin\Release\net6.0-windows\publish\win-x64\AudioModder.pdb
-C:\Users\janaa\source\repos\AudioModder\AudioModder\bin\Release\net6.0-windows\publish\win-x64\AudioModder.exe
