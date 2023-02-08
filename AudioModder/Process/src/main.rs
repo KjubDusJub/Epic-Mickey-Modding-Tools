@@ -148,12 +148,14 @@ fn main() {
         final_header = write_bytes(final_header, channel_one_data.to_vec(), 0xB6);
         final_header = write_bytes(final_header, samples.to_vec(), 0x74);
         final_header = write_bytes(final_header, data_tag_bypass.to_vec(), 0xFC);   
-        final_header = write_bytes(final_header, sample_rate.to_vec(), 0x1C);   
+        final_header = write_bytes(final_header, samples.to_vec(), 0x1C);   
+        final_header = write_bytes(final_header, sample_rate.to_vec(), 0x18);   
      }
      else{
         final_header = write_bytes(final_header, data_tag_bypass.to_vec(), 0xDC);
         final_header = write_bytes(final_header, samples.to_vec(), 0x74);   
-        final_header = write_bytes(final_header, sample_rate.to_vec(), 0x1C);   
+        final_header = write_bytes(final_header, samples.to_vec(), 0x1C);   
+        final_header = write_bytes(final_header, sample_rate.to_vec(), 0x18);   
      }
     
     final_header.append(&mut final_bytes.to_vec());

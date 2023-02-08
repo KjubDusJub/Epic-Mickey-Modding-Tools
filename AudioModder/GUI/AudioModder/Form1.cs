@@ -1,4 +1,7 @@
 using System.Diagnostics;
+using VGAudio.Containers.Dsp;
+using VGAudio.Containers.Wave;
+using VGAudio.Formats;
 
 namespace AudioModder
 {
@@ -9,20 +12,40 @@ namespace AudioModder
             InitializeComponent();
         }
 
+
+      
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void AutomateDSPCreation(string sourceFile)
+        {
+            using (var fs = new StreamReader(sourceFile))
+            {
+                AudioData data = new WaveReader().Read(fs.BaseStream);
+
+                byte[] final = new DspWriter().GetFile(data);
+
+                File.WriteAllBytes("final.dsp", final);
+            }
         }
 
         private void convert_Click(object sender, EventArgs e)
         {
             OpenFileDialog src = new OpenFileDialog();
 
-            src.Filter = "DSP File (*.dsp)|*.dsp";
+            src.Filter = "DSP File (*.dsp)|*.dsp|WAV File (*.wav)|*.wav";
 
             if (src.ShowDialog() == DialogResult.OK)
             {
-
+                string path = src.FileName;
+                if(src.FileName.EndsWith(".wav"))
+                {
+                    AutomateDSPCreation(path);
+                    path = "final.dsp";
+                }
 
                 var process = new Process
                 {
@@ -30,7 +53,8 @@ namespace AudioModder
               {
                   FileName = Directory.GetCurrentDirectory() + "/Files/audiomodder.exe",
                   UseShellExecute = true,
-                  Arguments = "\"" + src.FileName + "\"  "
+                  Arguments = "\"" + path + "\"  ",
+                  CreateNoWindow = false
               }
                 };
                 process.Start();

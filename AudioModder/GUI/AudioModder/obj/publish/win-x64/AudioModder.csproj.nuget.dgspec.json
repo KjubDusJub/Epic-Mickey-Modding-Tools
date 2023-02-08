@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janaa\\source\\repos\\AudioModder\\AudioModder\\AudioModder.csproj": {}
+    "D:\\github\\Epic-Mickey-Modding-Tools\\AudioModder\\GUI\\AudioModder\\AudioModder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janaa\\source\\repos\\AudioModder\\AudioModder\\AudioModder.csproj": {
+    "D:\\github\\Epic-Mickey-Modding-Tools\\AudioModder\\GUI\\AudioModder\\AudioModder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janaa\\source\\repos\\AudioModder\\AudioModder\\AudioModder.csproj",
+        "projectUniqueName": "D:\\github\\Epic-Mickey-Modding-Tools\\AudioModder\\GUI\\AudioModder\\AudioModder.csproj",
         "projectName": "AudioModder",
-        "projectPath": "C:\\Users\\janaa\\source\\repos\\AudioModder\\AudioModder\\AudioModder.csproj",
+        "projectPath": "D:\\github\\Epic-Mickey-Modding-Tools\\AudioModder\\GUI\\AudioModder\\AudioModder.csproj",
         "packagesPath": "C:\\Users\\janaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janaa\\source\\repos\\AudioModder\\AudioModder\\obj\\publish\\win-x64\\",
+        "outputPath": "D:\\github\\Epic-Mickey-Modding-Tools\\AudioModder\\GUI\\AudioModder\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -47,6 +47,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "VGAudio": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,0 +1,2 @@
+D:\github\Epic-Mickey-Modding-Tools\AudioModder\GUI\AudioModder\bin\Release\net6.0-windows\publish\win-x64\AudioModder.pdb
+D:\github\Epic-Mickey-Modding-Tools\AudioModder\GUI\AudioModder\bin\Release\net6.0-windows\publish\win-x64\AudioModder.exe
